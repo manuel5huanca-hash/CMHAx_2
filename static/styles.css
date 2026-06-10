@@ -1,0 +1,902 @@
+/*Parte superior*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff !important;
+  color: #000000;
+  height: 100px; /* 👈 define una altura fija */
+  padding: 0 40px; /* 👈 elimina el padding vertical */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.logo img {
+  height: 100px; /* 👈 ajusta la altura del logo */
+  width: auto;  /* 👈 mantiene proporción horizontal */
+  margin-right: 20px; /* separa del botón Categorías */
+  object-fit: contain; /* evita deformaciones */
+  vertical-align: middle; /* lo alinea con el texto y el botón */
+  border-radius: 50px;
+}
+
+/* Botón Categorías */
+.categorias {
+  background-color: #1d3ebc; /* azul más suave */
+  color: white;
+  border: none;
+  padding: 8px 15px; /* espacio interno equilibrado */
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* espacio entre el ícono y el texto */
+  width: auto; /* se adapta al texto */
+  height: auto; /* 👈 elimina la altura fija */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* sombra suave opcional */
+}
+
+/* Buscador */
+.buscador {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 8px 12px;
+  width: 600px; /* ajusta según tu diseño */
+}
+
+.icono-lupa {
+  font-size: 20px;
+  color: #c5c5c5; /* 👈 color gris suave */
+  margin-right: 8px;
+}
+
+.buscador input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  flex: 1;
+}
+
+/* Usuario y carrito */
+.usuario {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  padding-right: 60px; /* 👈 mueve todo el bloque más hacia adentro */
+  position: relative;
+  top: 2px; /* 👈 ajusta ligeramente la altura */
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  padding-right: 60px;
+}
+
+.login, .carrito {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Círculo detrás del ícono */
+.icono-circulo {
+  background-color: #f2f7ff; /* 👈 azul muy suave */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-usuario {
+  width: 40px;
+  height: 40px;
+  filter: none;
+}
+.icono-carrito {
+  width: 50px;
+  height: 50px;
+  filter: none;
+}
+
+/* Texto de bienvenida */
+.texto-login {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.bienvenido {
+  color: #6b6b6b;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.iniciar {
+  color: #004aad;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Carrito */
+.texto-carrito {
+  color: #8c8c8c;
+  font-weight: 600;
+}
+/*Fin*/
+
+/* Banner komi*/
+.banner {
+  background-image: url("fondo_3.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left;
+  padding: 250px 80px;
+  border-top: 80px solid #4b0082;
+  margin: 0;
+  border-bottom: 3px solid #710082;
+  position: relative;
+}
+/* Gradiente inferior para el banner */
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* altura del difuminado */
+  background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+  z-index: 2;
+}
+
+/* Contenedor del texto */
+.precio {
+  position: absolute;
+  top: 65%; 
+  right: 2%;
+  background-color: #ff0000; /* 🔴 rojo intenso */
+  color: #fff;
+  padding: 15px 0px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Precio principal */
+.actual {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Texto “PRECIO” */
+.precio-texto {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  display: block;
+}
+
+/* Precio anterior */
+.antes {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000; /* negro para contraste */
+  background-color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 8px;
+}
+/*fin*/
+
+/*@2026 tu empresa*/
+footer {
+  background-color: #0b0b3b;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+/*fin*/
+
+/* iniciar sesion */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mensajes {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+.mensajes .success { background-color: #00ffea; color: #0b0b3b; }
+.mensajes .danger { background-color: #ca0c0c; color: white; }
+/*fin*/
+
+/* Bloqueo de inicio de sesion */
+.bloqueo-container {
+  max-width: 500px;
+  margin: 150px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.bloqueo-container h1 {
+  color: #b30000;
+  margin-bottom: 20px;
+}
+
+.boton-bloqueo {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #b30000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.boton-bloqueo:hover {
+  background-color: #800000;
+}
+/*fin*/
+
+/*fondo del inicio de sesion komisan*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,rgba(55, 54, 54, 0.229), rgba(19, 18, 18, 0.144)),
+              url("fondo_login5.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  backdrop-filter: brightness(0.8);
+}
+/*fin*/
+
+/* Centrar el cuadro (cuadro del inicio de sesion) */
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -70%);
+  width: 500px;
+  padding: 70px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.67);
+  backdrop-filter: blur(10px);
+  color: #0b0b0b;
+  text-align: left;
+}
+
+/* Título */
+.login-container h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Etiquetas y campos */
+.login-container label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.557);
+  color: #141313;
+  outline: none;
+  font-size: 14px;
+}
+.login-container input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+/* Botón “Ingresar” */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff6600; /* 👈 color igual que el texto */
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+/*ilumina el ingresar*/
+.login-container button:hover {
+  background-color: #ff3300;
+}
+/* Enlace “¿Olvidaste tu contraseña?” */
+.login-container a {
+  display: block;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #000000;
+  text-decoration: underline;
+  text-align: center;
+}
+/*fin*/
+
+/*Catalogo de productos */
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0b0b3b;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #4b0082;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card button:hover {
+  background-color: #6a0dad;
+}
+
+/*Estilo para el enlace de registro */
+.registro-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+  text-align: center; /* centra el texto */
+}
+
+/* Enlace "Regístrate aquí" */
+.registro-btn {
+  color: #4b0082; /* morado principal */
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.registro-btn:hover {
+  color: #6a0dad; /* lavanda más clara */
+  text-shadow: 0 0 5px rgba(107, 0, 173, 0.4);
+}
+
+
+/*menu categorías*/
+.menu-categorias {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%; /* ancho moderado, no toda la pantalla */
+  max-height: 80vh; /* evita que cubra todo verticalmente */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+/* Cuando se activa */
+.menu-categorias.active {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Panel lateral */
+.menu-lateral {
+  width: 22%;
+  border-right: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 10px 0 0 10px;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral li {
+  padding: 12px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-lateral li:hover {
+  background-color: #eaeaea;
+  color: #4b0082;
+}
+
+/* Panel derecho */
+.menu-contenido {
+  width: 78%;
+  padding: 20px;
+}
+
+.contenido {
+  display: none;
+}
+
+.contenido.active {
+  display: block;
+}
+
+.contenido h3 {
+  color: #4b0082;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Scroll elegante */
+.menu-categorias::-webkit-scrollbar {
+  width: 8px;
+}
+.menu-categorias::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.menu-categorias::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+
+
+/*Footer*/
+/* Footer general */
+.footer {
+  background-color: #0b1445; /* azul oscuro */
+  color: #f5f5f5; /* texto más claro */
+  padding: 40px 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenedor principal */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Secciones */
+.footer-section {
+  width: 22%;
+  min-width: 200px;
+}
+
+/* Títulos */
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  border-bottom: 2px solid #6a0dad; /* morado más brillante */
+  padding-bottom: 5px;
+}
+
+/* Listas */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #dcdcdc;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li:hover {
+  color: #b366ff; /* morado claro al pasar el cursor */
+}
+
+/* WhatsApp */
+.whatsapp li {
+  font-weight: 600;
+  color: #00ff7f; /* verde brillante */
+}
+
+/* Medios de pago */
+.medios-pago img {
+  width: 40px;
+  margin-right: 8px;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* íconos blancos */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.medios-pago img:hover {
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(250deg) brightness(1.2);
+  transform: scale(1.1);
+}
+
+/* Libro de reclamaciones */
+.libro-icono {
+  width: 50px;
+  margin-top: 5px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.libro-icono:hover {
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(250deg) brightness(1.2);
+  transform: scale(1.1);
+}
+
+/* Línea final */
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #ccc;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+/* Línea final */
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #ccc;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+/* Sección de Envíos solo imagen */
+.envios-peru {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #ffffff;
+}
+
+.envios-banner img {
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/*envios*/
+
+
+/* Página de Proceso de Envío */
+.proceso-envio {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* fondo claro */
+  max-width: 1200px;
+  margin: 0 auto; /* centra todo el contenido */
+}
+
+/* Título principal */
+.proceso-envio h1 {
+  font-size: 30px;
+  color: #0b1445; /* azul corporativo */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Subtítulo */
+.proceso-envio p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Contenedor de pasos */
+.pasos-envio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Tarjetas individuales */
+.paso {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 25px 20px;
+  width: 250px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.paso:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.paso img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Imágenes inferiores */
+.info-envio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.info-envio img {
+  width: 45%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-envio img:hover {
+  transform: scale(1.03);
+}
+
+/* Detalles finales */
+.detalle-envio {
+  margin-top: 40px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.7;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detalle-envio strong {
+  color: #4b0082; /* morado corporativo */
+}
+
+/* Footer */
+.footer-copy {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 13px;
+  color: #666;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+/* Lista de categorías con fondo sombreado */
+.lista-categorias {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-categorias li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f7ff; /* fondo suave */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px 12px; /* 👈 más compacto */
+  margin-bottom: 6px; /* 👈 menos separación entre filas */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lista-categorias li:hover {
+  background-color: #eaeaff; /* tono más claro al pasar el mouse */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Nombre de la categoría */
+.nombre-categoria {
+  font-weight: 600;
+  color: #0b1445;
+  font-size: 10px; /* 👈 tamaño equilibrado */
+}
+
+/* Botón “Ver” */
+.boton-ver {
+  background-color: #dacee3;
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 5px; /* 👈 botón más pequeño */
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 10px; /* 👈 texto más pequeño */
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-left: 10px; /* separa del texto */
+}
+
+.boton-ver:hover {
+  background-color: #cebfd8;
+}
+
+
+/*otro */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fc; /* 👈 fondo uniforme */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.contenedor-catalogo {
+  display: flex;
+  background-color: #f8f9fc;
+  padding: 20px;
+  min-height: 80vh; /* 👈 asegura que ocupe toda la pantalla */
+}
+
+/* Filtros */
+.filtros {
+  width: 250px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.filtros h3 {
+  color: #4b0082;
+  margin-bottom: 10px;
+}
+
+/* Catálogo */
+.catalogo {
+  flex: 1;
+  padding: 20px;
+}
+
+.grid {
+ .grid {
+  display: flex;                /* 👈 usa flexbox para alinear en fila */
+  justify-content: center;      /* 👈 centra las tarjetas horizontalmente */
+  align-items: flex-start;      /* 👈 alinea arriba */
+  flex-wrap: nowrap;            /* 👈 evita que se vayan a otra línea */
+  gap: 20px;                    /* 👈 espacio entre tarjetas */
+  padding: 20px;
+}
+
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.card h3 {
+  font-size: 16px;
+  color: #0b1445;
+  margin: 10px 0;
+}
+
+.card .precio {
+  font-weight: bold;
+  color: #4b0082;
+}
+
+.agregar {
+  background-color: #4b0082;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.agregar:hover {
+  background-color: #6a0dad;
+}
+
+/* Imagen del producto */
+.card img {
+  width: 100%;
+  height: 120px; /* 👈 ajusta la altura según tu preferencia */
+  object-fit: contain; /* 👈 mantiene proporción sin deformar */
+  display: block;
+  margin: 0 auto; /* 👈 centra la imagen horizontalmente */
+  transition: transform 0.3s ease; /* 👈 efecto suave al pasar el mouse */
+}
+
+.card img:hover {
+  transform: scale(1.05); /* 👈 zoom ligero al pasar el mouse */
+}
+
+/*otro*/
+/* Nombre del producto */
+/* Imagen del producto */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain; /* 👈 mantiene proporción sin deformar */
+  margin-bottom: 10px;
+}
+.grid {
+ 
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center; /* 👈 centra cada tarjeta */
+}
