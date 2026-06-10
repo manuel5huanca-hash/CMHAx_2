@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda de Cómputo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='Logo.png') }}" alt="Logo Tienda">
+    </div>
+    <button id="btn-categorias" class="categorias">☰ Categorías</button>
+    <div class="buscador">
+      <span class="icono-lupa">🔍</span>
+      <input type="text" placeholder="Buscar productos, marcas y más...">
+    </div>
+
+    <div class="usuario">
+      <div class="login">
+        <div class="icono-circulo">
+          <img src="{{ url_for('static', filename='usuario.png') }}" alt="Usuario" class="icono-usuario">
+        </div>
+        <div class="texto-login">
+          <span class="bienvenido">BIENVENIDO</span>
+          <a href="{{ url_for('login') }}" class="iniciar">Iniciar Sesión</a>
+        </div>
+      </div>
+
+      <div class="carrito">
+        <div class="icono-circulo">
+          <img src="{{ url_for('static', filename='carrito.png') }}" alt="Carrito" class="icono-carrito">
+        </div>
+        <span class="texto-carrito">Carrito</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú de Categorías -->
+  <div id="menu-categorias" class="menu-categorias">
+    <div class="menu-lateral">
+      <ul>
+        <li data-target="componentes">Componentes</li>
+        <li data-target="perifericos">Periféricos</li>
+        <li data-target="monitores">Monitores</li>
+        <li data-target="laptops">Laptops</li>
+        <li data-target="pc">PC</li>
+        <li data-target="licencias">Licencias</li>
+      </ul>
+    </div>
+
+    <div class="menu-contenido">
+      <div id="componentes" class="contenido active">
+        <h3>Componentes</h3>
+        <ul>
+         <li>
+    <span class="nombre-categoria">Procesador</span>
+    <a href="{{ url_for('categoria', nombre='Procesador') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Placa Madre</span>
+    <a href="{{ url_for('categoria', nombre='Placa Madre') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Memoria RAM</span>
+    <a href="{{ url_for('categoria', nombre='Memoria RAM') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Disco SSD</span>
+    <a href="{{ url_for('categoria', nombre='Disco SSD') }}" class="boton-ver">Ver</a>
+  </li>
+        </ul>
+      </div>
+
+      <div id="perifericos" class="contenido">
+        <h3>Periféricos</h3>
+        <ul>
+          <li>
+    <span class="nombre-categoria">Teclado</span>
+    <a href="{{ url_for('categoria', nombre='Teclado') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Mouse</span>
+    <a href="{{ url_for('categoria', nombre='Mouse') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Audífono</span>
+    <a href="{{ url_for('categoria', nombre='Audífono') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Micrófono</span>
+    <a href="{{ url_for('categoria', nombre='Micrófono') }}" class="boton-ver">Ver</a>
+  </li>
+        </ul>
+      </div>
+
+      <div id="monitores" class="contenido">
+        <h3>Monitores</h3>
+        <ul>
+          <li>
+    <span class="nombre-categoria">Monitor 24"</span>
+    <a href="{{ url_for('categoria', nombre='Monitor 24\"') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Monitor 27"</span>
+    <a href="{{ url_for('categoria', nombre='Monitor 27\"') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Monitor Gamer</span>
+    <a href="{{ url_for('categoria', nombre='Monitor Gamer') }}" class="boton-ver">Ver</a>
+  </li>
+        </ul>
+      </div>
+      <div id="laptops" class="contenido">
+        <h3>Laptops</h3>
+        <ul>
+          <li>
+    <span class="nombre-categoria">Laptop Gamer</span>
+    <a href="{{ url_for('categoria', nombre='Laptop Gamer') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Laptop Business</span>
+    <a href="{{ url_for('categoria', nombre='Laptop Business') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Laptop Estudiante</span>
+    <a href="{{ url_for('categoria', nombre='Laptop Estudiante') }}" class="boton-ver">Ver</a>
+  </li>
+        </ul>
+      </div>
+      <div id="pc" class="contenido">
+        <h3>PC</h3>
+        <ul>
+          <li>
+    <span class="nombre-categoria">PC Gamer</span>
+    <a href="{{ url_for('categoria', nombre='PC Gamer') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">PC Business</span>
+    <a href="{{ url_for('categoria', nombre='PC Business') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">PC Estudiante</span>
+    <a href="{{ url_for('categoria', nombre='PC Estudiante') }}" class="boton-ver">Ver</a>
+  </li>
+        </ul>
+      </div>
+      <div id="licencias" class="contenido">
+        <h3>Licencias</h3>
+        <ul>
+          <li>
+    <span class="nombre-categoria">Licencia Windows</span>
+    <a href="{{ url_for('categoria', nombre='Licencia Windows') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Licencia Office</span>
+    <a href="{{ url_for('categoria', nombre='Licencia Office') }}" class="boton-ver">Ver</a>
+  </li>
+          <li>
+    <span class="nombre-categoria">Licencia Adobe</span>
+    <a href="{{ url_for('categoria', nombre='Licencia Adobe') }}" class="boton-ver">Ver</a>
+  </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-contenido">
+      <div class="precio">
+        <span class="descuento">Descuento - S/150.00</span>
+        <span class="actual">S/1,050.30</span>
+        <span class="antes">Antes: S/1,200.30</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo de Productos -->
+<!-- Catálogo de Productos -->
+<section class="categorias">
+  <div class="grid">
+    {% for producto in productos %}
+      <div class="card">
+        <img src="{{ url_for('static', filename=producto.imagen) }}" alt="{{ producto.nombre }}">
+        <h3>{{ producto.nombre }}</h3>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+  <!-- Sección de Envíos -->
+  <section class="envios-peru">
+    <div class="envios-banner">
+      <a href="{{ url_for('envios') }}">
+        <img src="{{ url_for('static', filename='envios.webp') }}" alt="Envíos a todo el Perú">
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Atención al cliente</h3>
+        <ul>
+          <li>Delivery</li>
+          <li>Envío a provincia</li>
+          <li>Términos y condiciones</li>
+          <li>Términos y Condiciones Garantía</li>
+          <li>Políticas de Privacidad</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Sobre CMHA</h3>
+        <ul>
+          <li>Contacto</li>
+          <li>Sobre nosotros</li>
+          <li>Nuestras tiendas</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Información instantánea</h3>
+        <ul class="whatsapp">
+          <li> 921 605 668</li>
+          <li> 917 722 422</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Destacados</h3>
+        <p>Medios de pago</p>
+        <div class="medios-pago">
+          <img src="{{ url_for('static', filename='plin.svg') }}" alt="Plin">
+          <img src="{{ url_for('static', filename='visa.svg') }}" alt="Visa">
+          <img src="{{ url_for('static', filename='mastercard.svg') }}" alt="Mastercard">
+          <img src="{{ url_for('static', filename='amex.svg') }}" alt="American Express">
+          <img src="{{ url_for('static', filename='yape.svg') }}" alt="Yape">
+        </div>
+        <p>Libro de reclamaciones</p>
+        <img src="{{ url_for('static', filename='libro.png') }}" alt="Libro de reclamaciones" class="libro-icono">
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      <p>© 2026 CMHA Tecnología Integral — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para interacción del menú -->
+  <script>
+    const btnCategorias = document.getElementById("btn-categorias");
+    const menuCategorias = document.getElementById("menu-categorias");
+    const items = document.querySelectorAll(".menu-lateral li");
+    const contenidos = document.querySelectorAll(".contenido");
+
+    // Mostrar/ocultar menú al hacer clic
+    btnCategorias.addEventListener("click", () => {
+      menuCategorias.classList.toggle("active");
+    });
+
+    // Cerrar el menú si se hace clic fuera
+    document.addEventListener("click", (e) => {
+      if (!menuCategorias.contains(e.target) && !btnCategorias.contains(e.target)) {
+        menuCategorias.classList.remove("active");
+      }
+    });
+
+    // Cambiar contenido al pasar el mouse
+    items.forEach(item => {
+      item.addEventListener("mouseenter", () => {
+        contenidos.forEach(c => c.classList.remove("active"));
+        const target = document.getElementById(item.dataset.target);
+        if (target) target.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

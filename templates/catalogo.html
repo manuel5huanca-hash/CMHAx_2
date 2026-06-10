@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ categoria | capitalize }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='Logo.png') }}" alt="Logo Tienda">
+    </div>
+    <h2>{{ categoria | upper }}</h2>
+  </header>
+
+ <!-- Contenedor principal -->
+<div class="contenedor-catalogo">
+  <!-- Filtros -->
+  <aside class="filtros">
+    <h3>Filtros</h3>
+    <ul>
+      <li><strong>Ver todo el catálogo</strong></li>
+      <li>Rango de precio</li>
+      <li>Marca</li>
+      <li>Resolución</li>
+    </ul>
+  </aside>
+
+  <!-- Catálogo -->
+  <section class="catalogo">
+    {% if productos %}
+      <div class="grid">
+        {% for producto in productos %}
+          <div class="card">
+            <img src="{{ url_for('static', filename=producto.imagen) }}" alt="{{ producto.nombre }}">
+            <h3>{{ producto.nombre }}</h3>
+            <button class="agregar">Agregar</button>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="no-resultados">
+        <img src="{{ url_for('static', filename='sin_resultados.png') }}" alt="Sin resultados">
+        <h3>{{ mensaje }}</h3>
+        <p>Intenta ajustar tu búsqueda o filtros.</p>
+      </div>
+    {% endif %}
+  </section>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Atención al cliente</h3>
+      <ul>
+        <li>Delivery</li>
+        <li>Envío a provincia</li>
+        <li>Términos y condiciones</li>
+        <li>Términos y Condiciones Garantía</li>
+        <li>Políticas de Privacidad</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Sobre CMHA</h3>
+      <ul>
+        <li>Contacto</li>
+        <li>Sobre nosotros</li>
+        <li>Nuestras tiendas</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Información instantánea</h3>
+        <ul class="whatsapp">
+          <li>📱 921 605 668</li>
+          <li>📱 917 722 422</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Destacados</h3>
+        <p>Medios de pago</p>
+        <div class="medios-pago">
+          <img src="{{ url_for('static', filename='plin.svg') }}" alt="Plin">
+          <img src="{{ url_for('static', filename='visa.svg') }}" alt="Visa">
+          <img src="{{ url_for('static', filename='mastercard.svg') }}" alt="Mastercard">
+          <img src="{{ url_for('static', filename='amex.svg') }}" alt="American Express">
+          <img src="{{ url_for('static', filename='yape.svg') }}" alt="Yape">
+        </div>
+        <p>Libro de reclamaciones</p>
+        <img src="{{ url_for('static', filename='libro.png') }}" alt="Libro de reclamaciones" class="libro-icono">
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      <p>© 2026 CMHA Tecnología Integral — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

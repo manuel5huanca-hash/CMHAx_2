@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proceso de Envío</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <!-- Encabezado igual al index -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='Logo.png') }}" alt="Logo Tienda">
+    </div>
+
+    <button id="btn-categorias" class="categorias">☰ Categorías</button>
+
+    <div class="buscador">
+      <span class="icono-lupa">🔍</span>
+      <input type="text" placeholder="Buscar productos, marcas y más...">
+    </div>
+
+    <div class="usuario">
+      <div class="login">
+        <div class="icono-circulo">
+          <img src="{{ url_for('static', filename='usuario.png') }}" alt="Usuario" class="icono-usuario">
+        </div>
+        <div class="texto-login">
+          <span class="bienvenido">BIENVENIDO</span>
+          <a href="{{ url_for('login') }}" class="iniciar">Iniciar Sesión</a>
+        </div>
+      </div>
+
+      <div class="carrito">
+        <div class="icono-circulo">
+          <img src="{{ url_for('static', filename='carrito.png') }}" alt="Carrito" class="icono-carrito">
+        </div>
+        <span class="texto-carrito">Carrito</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección principal -->
+  <section class="proceso-envio">
+    <h1>Proceso de Envío</h1>
+    <p>Conoce nuestro proceso de entrega a Lima, Callao y todo el PERÚ.  
+    Aseguramos responsabilidad y puntualidad en cada envío.</p>
+
+    <div class="pasos-envio">
+      <div class="paso">
+        <img src="{{ url_for('static', filename='icono1.webp') }}" alt="Contacto y Compra">
+        <h3>Contacto y Compra</h3>
+        <p>Puede contactarnos a través de nuestra página, redes sociales o WhatsApp y realizar su orden de compra.</p>
+      </div>
+
+      <div class="paso">
+        <img src="{{ url_for('static', filename='icono2.webp') }}" alt="Confirmación del Producto">
+        <h3>Confirmación del Producto</h3>
+        <p>Le enviaremos la cotización y confirmación del producto antes de realizar el depósito.</p>
+      </div>
+
+      <div class="paso">
+        <img src="{{ url_for('static', filename='icono3.webp') }}" alt="Validación de Pago">
+        <h3>Validación de Pago</h3>
+        <p>Una vez realizado el pago, recibirá su comprobante por correo o WhatsApp.</p>
+      </div>
+
+      <div class="paso">
+        <img src="{{ url_for('static', filename='icono4.webp') }}" alt="Coordinación y Entrega">
+        <h3>Coordinación y Entrega</h3>
+        <p>Coordinamos fecha, dirección y persona de recepción. Entregamos en máximo 24 horas.</p>
+      </div>
+    </div>
+
+    <div class="info-envio">
+      <img src="{{ url_for('static', filename='rapido_seguro.webp') }}" alt="Rápido y Seguro">
+      <img src="{{ url_for('static', filename='puerta_hogar.webp') }}" alt="Puerta de tu Hogar">
+    </div>
+
+    <div class="detalle-envio">
+      <p><strong>Horario de Servicio Delivery:</strong> De lunes a sábado de 10am a 6pm.  
+      Entrega dentro de 24 horas (sin contar domingos y feriados).</p>
+      <p><strong>Recojo en Tienda:</strong> JR. LOS DIAMANTES 1849, tienda 639, Centro Comercial SAN JUAN DE LURIGANCHO.</p>
+      <p><strong>Garantía de Seguridad:</strong> Embalaje profesional y seguimiento en tiempo real.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Atención al cliente</h3>
+      <ul>
+        <li>Delivery</li>
+        <li>Envío a provincia</li>
+        <li>Términos y condiciones</li>
+        <li>Términos y Condiciones Garantía</li>
+        <li>Políticas de Privacidad</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Sobre CMHA</h3>
+      <ul>
+        <li>Contacto</li>
+        <li>Sobre nosotros</li>
+        <li>Nuestras tiendas</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Información instantánea</h3>
+        <ul class="whatsapp">
+          <li>📱 921 605 668</li>
+          <li>📱 917 722 422</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Destacados</h3>
+        <p>Medios de pago</p>
+        <div class="medios-pago">
+          <img src="{{ url_for('static', filename='plin.svg') }}" alt="Plin">
+          <img src="{{ url_for('static', filename='visa.svg') }}" alt="Visa">
+          <img src="{{ url_for('static', filename='mastercard.svg') }}" alt="Mastercard">
+          <img src="{{ url_for('static', filename='amex.svg') }}" alt="American Express">
+          <img src="{{ url_for('static', filename='yape.svg') }}" alt="Yape">
+        </div>
+        <p>Libro de reclamaciones</p>
+        <img src="{{ url_for('static', filename='libro.png') }}" alt="Libro de reclamaciones" class="libro-icono">
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      <p>© 2026 CMHA Tecnología Integral — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+

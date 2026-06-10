@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Usuarios</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Registro de Usuarios</h2>
+    <form method="POST">
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" name="usuario" value="{{ usuario }}" required>
+
+      <label for="clave">Contraseña</label>
+      <input type="password" id="clave" name="clave" value="{{ clave }}" required>
+
+      <button type="submit" name="accion" value="guardar">Guardar</button>
+    </form>
+
+    <p>{{ mensaje }}</p>
+
+    <!-- Botón para volver al inicio -->
+    <a href="{{ url_for('inicio') }}" class="volver-btn">Volver al inicio</a>
+  </div>
+</body>
+</html>
+
